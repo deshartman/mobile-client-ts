@@ -1,0 +1,38 @@
+# Don't copy node_modules into the image — deps stage reinstalls cleanly.
+**/node_modules
+
+# Build artifacts
+**/.next
+**/dist
+**/coverage
+**/.turbo
+**/*.tsbuildinfo
+
+# Local databases and env files (never in an image)
+**/data
+**/*.db
+**/*.db-journal
+**/*.db-wal
+**/*.db-shm
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env*.local
+
+# Tests and IDE cruft
+**/*.test.ts
+**/*.test.tsx
+.vscode
+.idea
+.DS_Store
+
+# Git and CI
+.git
+.github
+.claude
+.playwright-mcp
+
+# Legacy docs
+*.legacy

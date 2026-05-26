@@ -1,0 +1,21 @@
+{
+  "name": "mobileclient-ts",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm -r build",
+    "start": "pnpm --filter web start",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter web test",
+    "test:coverage": "pnpm --filter web test:coverage",
+    "lint": "pnpm --filter web lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
