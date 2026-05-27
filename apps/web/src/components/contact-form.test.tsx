@@ -106,8 +106,8 @@ describe("ContactForm — edit", () => {
     await user.tab();
 
     await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
-    const [url, init] = fetchMock.mock.calls[0];
+    const [url, init] = fetchMock.mock.calls[0]!;
     expect(url).toBe("/api/contacts/u1/c1");
-    expect(init.method).toBe("PUT");
+    expect(init!.method).toBe("PUT");
   });
 });

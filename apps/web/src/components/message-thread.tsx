@@ -181,7 +181,7 @@ export function MessageThread({ userGuid, remoteAddress, search }: Readonly<Prop
 
   const needle = search?.trim().toLowerCase() ?? "";
   const visible = needle
-    ? messages.filter((m) => m.body.toLowerCase().includes(needle))
+    ? messages.filter((m) => m.body?.toLowerCase().includes(needle) ?? false)
     : messages;
   let body: React.ReactNode;
   if (messages.length === 0) {
